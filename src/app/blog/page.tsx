@@ -2,7 +2,7 @@ import { PageWrapper } from "@/components/layout/page-wrapper";
 import { ScrollReveal } from "@/components/layout/page-wrapper";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import Link from "next/link";
-import { LucideClock, LucideArrowRight } from "lucide-react";
+import { Clock, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const metadata = {
@@ -54,7 +54,7 @@ export default function BlogPage() {
                       <span className="text-sm text-text-muted">{featuredPost.author.name}</span>
                     </div>
                     <div className="flex items-center gap-2 text-sm text-text-muted">
-                      <LucideClock size={14} />
+                      <Clock size={14} />
                       {featuredPost.readTime}
                     </div>
                   </div>
@@ -100,7 +100,7 @@ export default function BlogPage() {
                     <span className="text-xs text-text-muted">{post.publishedAt}</span>
                     <div className="flex items-center gap-1.5 text-xs text-accent font-semibold opacity-0 group-hover:opacity-100 transition-opacity">
                       Read more
-                      <LucideArrowRight size={14} />
+                      <ArrowRight size={14} />
                     </div>
                   </div>
                 </Link>

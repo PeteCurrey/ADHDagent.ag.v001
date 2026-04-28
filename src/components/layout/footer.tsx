@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { LucideTwitter, LucideLinkedin } from "lucide-react";
+import { Mail, Globe } from "lucide-react";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -18,12 +18,12 @@ export function Footer() {
               Less noise, more structure, total clarity.
             </p>
             <div className="flex items-center gap-4">
-              <a href="#" className="text-text-muted hover:text-accent transition-colors">
-                <LucideTwitter size={20} />
-              </a>
-              <a href="#" className="text-text-muted hover:text-accent transition-colors">
-                <LucideLinkedin size={20} />
-              </a>
+                <Link href="#" className="w-10 h-10 rounded-full bg-white/[0.03] border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-all">
+                  <Mail size={18} />
+                </Link>
+                <Link href="#" className="w-10 h-10 rounded-full bg-white/[0.03] border border-border flex items-center justify-center text-text-muted hover:text-accent hover:border-accent transition-all">
+                  <Globe size={18} />
+                </Link>
             </div>
           </div>
 

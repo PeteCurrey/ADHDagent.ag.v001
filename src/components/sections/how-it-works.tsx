@@ -1,21 +1,21 @@
 "use client";
 
 import { ScrollReveal } from "@/components/layout/page-wrapper";
-import { LucideBrain, LucideUsers, LucideZap } from "lucide-react";
+import { Brain, Users, Zap } from "lucide-react";
 
 const steps = [
   {
-    icon: <LucideBrain className="text-accent" size={32} />,
+    icon: <Brain className="text-accent" size={32} />,
     title: "Tell us how your brain works",
     description: "Quick onboarding — ADHD type, work style, biggest friction points. 5 minutes.",
   },
   {
-    icon: <LucideUsers className="text-success" size={32} />,
+    icon: <Users className="text-success" size={32} />,
     title: "Meet your agents",
     description: "Seven AI agents, each built for a specific ADHD challenge. Use the ones that fit. Ignore the rest.",
   },
   {
-    icon: <LucideZap className="text-warning" size={32} />,
+    icon: <Zap className="text-warning" size={32} />,
     title: "Stop managing. Start finishing.",
     description: "Your agents work in the background, surface what matters, and hold you accountable without judgment.",
   },

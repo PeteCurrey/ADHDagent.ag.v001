@@ -1,13 +1,13 @@
 "use client";
 
 import { ScrollReveal } from "@/components/layout/page-wrapper";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useInView, useScroll, useTransform } from "framer-motion";
 import * as React from "react";
 
 function Counter({ value, suffix = "", label }: { value: number; suffix?: string; label: string }) {
   const [count, setCount] = React.useState(0);
   const ref = React.useRef(null);
-  const isInView = motion.useInView(ref, { once: true });
+  const isInView = useInView(ref, { once: true });
 
   React.useEffect(() => {
     if (isInView) {

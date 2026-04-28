@@ -4,7 +4,7 @@ import { PageWrapper } from "@/components/layout/page-wrapper";
 import { ScrollReveal } from "@/components/layout/page-wrapper";
 import { MeshBackground } from "@/components/ui/mesh-background";
 import { Button } from "@/components/ui/button";
-import { LucideMail, LucideMessageSquare, LucideSend } from "lucide-react";
+import { Mail, MessageSquare, Send } from "lucide-react";
 import * as React from "react";
 
 export default function ContactPage() {
@@ -40,7 +40,7 @@ export default function ContactPage() {
                 <div className="space-y-8">
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent">
-                      <LucideMail size={24} />
+                      <Mail size={24} />
                     </div>
                     <div>
                       <div className="text-sm font-bold text-text-primary">Email</div>
@@ -49,7 +49,7 @@ export default function ContactPage() {
                   </div>
                   <div className="flex items-center gap-4">
                     <div className="w-12 h-12 rounded-xl bg-success/10 flex items-center justify-center text-success">
-                      <LucideMessageSquare size={24} />
+                      <MessageSquare size={24} />
                     </div>
                     <div>
                       <div className="text-sm font-bold text-text-primary">Support</div>
@@ -64,7 +64,7 @@ export default function ContactPage() {
                   {submitted ? (
                     <div className="text-center py-12 animate-in fade-in zoom-in duration-500">
                       <div className="w-16 h-16 rounded-full bg-success/20 flex items-center justify-center text-success mx-auto mb-6">
-                        <LucideSend size={32} />
+                        <Send size={32} />
                       </div>
                       <h3 className="text-2xl font-bold mb-4">Message sent.</h3>
                       <p className="text-text-secondary">We'll get back to you within 24 hours.</p>
@@ -111,7 +111,7 @@ export default function ContactPage() {
                       </div>
                       <Button variant="gradient" size="lg" className="w-full h-14" disabled={isSubmitting}>
                         {isSubmitting ? "Sending..." : "Send Message"}
-                        <LucideSend size={18} className="ml-2" />
+                        <Send size={18} className="ml-2" />
                       </Button>
                     </form>
                   )}

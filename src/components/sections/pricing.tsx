@@ -2,7 +2,7 @@
 
 import { ScrollReveal } from "@/components/layout/page-wrapper";
 import { Button, cn } from "@/components/ui/button";
-import { LucideCheck } from "lucide-react";
+import { Check } from "lucide-react";
 import * as React from "react";
 import Link from "next/link";
 
@@ -117,7 +117,7 @@ export function Pricing() {
                 <div className="space-y-4 mb-10 flex-grow">
                   {plan.features.map((feature, idx) => (
                     <div key={idx} className="flex items-start gap-3 text-sm">
-                      <LucideCheck size={16} className="text-success mt-0.5 flex-shrink-0" />
+                      <Check size={16} className="text-success mt-0.5 flex-shrink-0" />
                       <span className="text-text-secondary">{feature}</span>
                     </div>
                   ))}

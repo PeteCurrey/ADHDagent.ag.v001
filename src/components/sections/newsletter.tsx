@@ -2,7 +2,7 @@
 
 import { ScrollReveal } from "@/components/layout/page-wrapper";
 import { Button } from "@/components/ui/button";
-import { LucideCheck } from "lucide-react";
+import { Check } from "lucide-react";
 
 export function Newsletter() {
   return (
@@ -24,7 +24,7 @@ export function Newsletter() {
               ].map((item, i) => (
                 <div key={i} className="flex items-center gap-3 text-text-primary">
                   <div className="flex-shrink-0 w-5 h-5 rounded-full bg-success/20 flex items-center justify-center text-success">
-                    <LucideCheck size={12} strokeWidth={3} />
+                    <Check size={12} strokeWidth={3} />
                   </div>
                   <span>{item}</span>
                 </div>

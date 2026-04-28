@@ -3,7 +3,7 @@
 import { ScrollReveal } from "@/components/layout/page-wrapper";
 import { Button } from "@/components/ui/button";
 import { MeshBackground } from "@/components/ui/mesh-background";
-import { LucideArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import Link from "next/link";
 
 export function FinalCTA() {
@@ -25,7 +25,7 @@ export function FinalCTA() {
             <Link href="/signup">
               <Button variant="gradient" size="lg" className="group h-16 px-12 text-lg">
                 Start free trial
-                <LucideArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
             

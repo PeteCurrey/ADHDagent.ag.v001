@@ -3,7 +3,7 @@
 import { Button } from "@/components/ui/button";
 import { MeshBackground } from "@/components/ui/mesh-background";
 import { useRouter } from "next/navigation";
-import { LucideArrowRight, LucideArrowLeft, LucideCheckCircle2 } from "lucide-react";
+import { ArrowRight, ArrowLeft, CheckCircle2 } from "lucide-react";
 import * as React from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -148,7 +148,7 @@ export default function OnboardingPage() {
                       }`}
                     >
                       <span className="font-medium">{option.label}</span>
-                      {isSelected && <LucideCheckCircle2 size={20} className="text-accent" />}
+                      {isSelected && <CheckCircle2 size={20} className="text-accent" />}
                     </button>
                   );
                 })}
@@ -164,7 +164,7 @@ export default function OnboardingPage() {
             disabled={currentStep === 0}
             className={currentStep === 0 ? "opacity-0" : ""}
           >
-            <LucideArrowLeft size={18} className="mr-2" />
+            <ArrowLeft size={18} className="mr-2" />
             Back
           </Button>
           <Button 
@@ -174,7 +174,7 @@ export default function OnboardingPage() {
             disabled={!selections[step.id] || (step.multiSelect && selections[step.id].length === 0)}
           >
             {currentStep === steps.length - 1 ? "Complete setup" : "Next step"}
-            <LucideArrowRight size={18} className="ml-2" />
+            <ArrowRight size={18} className="ml-2" />
           </Button>
         </div>
       </div>

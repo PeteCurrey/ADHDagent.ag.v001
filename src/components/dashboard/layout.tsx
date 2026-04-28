@@ -3,22 +3,22 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { 
-  LucideLayoutDashboard, 
-  LucideUsers, 
-  LucideNewspaper, 
-  LucideSettings, 
-  LucideHelpCircle,
-  LucideLogOut,
-  LucideZap
+  LayoutDashboard, 
+  Users, 
+  Newspaper, 
+  Settings, 
+  HelpCircle,
+  LogOut,
+  Zap
 } from "lucide-react";
 import { cn } from "@/components/ui/button";
 
 const sidebarItems = [
-  { name: "Dashboard", href: "/dashboard", icon: LucideLayoutDashboard },
-  { name: "My Agents", href: "/dashboard/agents", icon: LucideZap },
-  { name: "Briefing", href: "/dashboard/briefing", icon: LucideNewspaper },
-  { name: "Settings", href: "/dashboard/settings", icon: LucideSettings },
-  { name: "Help", href: "/dashboard/help", icon: LucideHelpCircle },
+  { name: "Dashboard", href: "/dashboard", icon: LayoutDashboard },
+  { name: "My Agents", href: "/dashboard/agents", icon: Zap },
+  { name: "Briefing", href: "/dashboard/briefing", icon: Newspaper },
+  { name: "Settings", href: "/dashboard/settings", icon: Settings },
+  { name: "Help", href: "/dashboard/help", icon: HelpCircle },
 ];
 
 export function DashboardSidebar() {
@@ -69,7 +69,7 @@ export function DashboardSidebar() {
         </div>
         
         <button className="flex items-center gap-3 px-4 py-3 text-sm font-medium text-text-muted hover:text-warning transition-colors w-full">
-          <LucideLogOut size={18} />
+          <LogOut size={18} />
           Sign out
         </button>
       </div>

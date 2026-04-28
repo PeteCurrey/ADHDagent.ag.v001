@@ -2,7 +2,7 @@
 
 import * as React from "react"
 import * as AccordionPrimitive from "@radix-ui/react-accordion"
-import { LucideChevronDown } from "lucide-react"
+import { ChevronDown } from "lucide-react"
 import { clsx, type ClassValue } from "clsx"
 import { twMerge } from "tailwind-merge"
 
@@ -38,7 +38,7 @@ const AccordionTrigger = React.forwardRef<
       {...props}
     >
       {children}
-      <LucideChevronDown className="h-5 w-5 shrink-0 text-text-muted transition-transform duration-200 group-hover:text-accent" />
+      <ChevronDown className="h-5 w-5 shrink-0 text-text-muted transition-transform duration-200 group-hover:text-accent" />
     </AccordionPrimitive.Trigger>
   </AccordionPrimitive.Header>
 ))

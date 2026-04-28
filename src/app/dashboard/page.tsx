@@ -3,21 +3,21 @@
 import { DashboardHeader } from "@/components/dashboard/layout";
 import { Button } from "@/components/ui/button";
 import { 
-  LucideLayout, 
-  LucideArrowRight, 
-  LucideCheckCircle2, 
-  LucideClock, 
-  LucideTrendingUp,
-  LucideMail,
-  LucideMic
+  Layout, 
+  ArrowRight, 
+  CheckCircle2, 
+  Clock, 
+  TrendingUp,
+  Mail,
+  Mic
 } from "lucide-react";
 import Link from "next/link";
 
 const quickAgents = [
-  { name: "Clarity", slug: "clarity", icon: LucideLayout, color: "text-accent" },
-  { name: "Momentum", slug: "momentum", icon: LucideTrendingUp, color: "text-success" },
-  { name: "Inbox Zero", slug: "inbox-zero", icon: LucideMail, color: "text-accent" },
-  { name: "Capture", slug: "capture", icon: LucideMic, color: "text-accent" },
+  { name: "Clarity", slug: "clarity", icon: Layout, color: "text-accent" },
+  { name: "Momentum", slug: "momentum", icon: TrendingUp, color: "text-success" },
+  { name: "Inbox Zero", slug: "inbox-zero", icon: Mail, color: "text-accent" },
+  { name: "Capture", slug: "capture", icon: Mic, color: "text-accent" },
 ];
 
 export default function DashboardHomePage() {
@@ -41,7 +41,7 @@ export default function DashboardHomePage() {
               <div className="flex items-center justify-between mb-8">
                 <div className="flex items-center gap-3">
                   <div className="p-2 rounded-lg bg-accent/10 text-accent">
-                    <LucideLayout size={20} />
+                    <Layout size={20} />
                   </div>
                   <h3 className="font-bold">Today's Focus</h3>
                 </div>
@@ -59,7 +59,7 @@ export default function DashboardHomePage() {
                   <div key={i} className="flex items-center justify-between p-4 bg-white/[0.03] rounded-xl border border-border group hover:border-accent/30 transition-colors cursor-pointer">
                     <div className="flex items-center gap-4">
                       <div className="w-6 h-6 rounded border border-text-muted flex items-center justify-center group-hover:border-accent transition-colors">
-                        <LucideCheckCircle2 size={14} className="text-accent opacity-0 group-hover:opacity-100" />
+                        <CheckCircle2 size={14} className="text-accent opacity-0 group-hover:opacity-100" />
                       </div>
                       <span className="text-sm font-medium text-text-primary">{item.task}</span>
                     </div>
@@ -71,7 +71,7 @@ export default function DashboardHomePage() {
                         {item.priority}
                       </span>
                       <div className="flex items-center gap-1.5 text-xs text-text-muted">
-                        <LucideClock size={14} />
+                        <Clock size={14} />
                         {item.time}
                       </div>
                     </div>
@@ -105,7 +105,7 @@ export default function DashboardHomePage() {
               </p>
               <Button className="w-full bg-bg text-text-primary border-none hover:bg-bg/90 h-10 text-xs">
                 Read issue
-                <LucideArrowRight size={14} className="ml-2" />
+                <ArrowRight size={14} className="ml-2" />
               </Button>
             </div>
 

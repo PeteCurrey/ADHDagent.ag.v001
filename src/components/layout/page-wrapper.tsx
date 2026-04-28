@@ -25,7 +25,7 @@ export function PageWrapper({ children }: PageWrapperProps) {
             animate="enter"
             exit="exit"
             variants={variants}
-            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] }}
+            transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1] } as any}
           >
             {children}
           </motion.div>
@@ -54,7 +54,7 @@ export function ScrollReveal({
         duration: 0.6, 
         delay, 
         ease: [0.16, 1, 0.3, 1] 
-      }}
+      } as any}
       className={className}
     >
       {children}

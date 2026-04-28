@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MeshBackground } from "@/components/ui/mesh-background";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
-import { LucideMail, LucideArrowLeft, LucideCheckCircle2 } from "lucide-react";
+import { Mail, ArrowLeft, CheckCircle2 } from "lucide-react";
 import * as React from "react";
 
 export default function SignupPage() {
@@ -27,7 +27,7 @@ export default function SignupPage() {
       <MeshBackground />
       
       <Link href="/" className="absolute top-8 left-8 flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors">
-        <LucideArrowLeft size={16} />
+        <ArrowLeft size={16} />
         <span className="text-sm font-medium">Back to home</span>
       </Link>
 
@@ -50,7 +50,7 @@ export default function SignupPage() {
               "The Briefing weekly intelligence"
             ].map((item, i) => (
               <li key={i} className="flex items-center gap-3 text-text-secondary">
-                <LucideCheckCircle2 size={20} className="text-success" />
+                <CheckCircle2 size={20} className="text-success" />
                 <span>{item}</span>
               </li>
             ))}
@@ -116,7 +116,7 @@ export default function SignupPage() {
                 disabled={isLoading}
               >
                 {isLoading ? "Preparing trial..." : "Start my free trial"}
-                <LucideMail size={18} className="ml-2" />
+                <Mail size={18} className="ml-2" />
               </Button>
             </form>
           </div>

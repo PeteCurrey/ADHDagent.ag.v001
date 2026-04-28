@@ -4,7 +4,7 @@ import * as React from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { Button, cn } from "@/components/ui/button";
-import { LucideMenu, LucideX } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const navLinks = [
   { name: "How it works", href: "/#how-it-works" },
@@ -72,7 +72,7 @@ export function Navbar() {
           className="md:hidden text-text-primary"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <LucideX size={24} /> : <LucideMenu size={24} />}
+          {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 

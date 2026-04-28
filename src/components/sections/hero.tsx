@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { MeshBackground } from "@/components/ui/mesh-background";
-import { LucideArrowRight, LucideChevronDown } from "lucide-react";
+import { ArrowRight, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 export function Hero() {
@@ -20,7 +20,7 @@ export function Hero() {
 
   const item = {
     hidden: { opacity: 0, y: 20 },
-    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } },
+    show: { opacity: 1, y: 0, transition: { duration: 0.8, ease: [0.16, 1, 0.3, 1] } as any },
   };
 
   return (
@@ -61,7 +61,7 @@ export function Hero() {
             <Link href="/signup">
               <Button variant="gradient" size="lg" className="group">
                 Start your free 14-day trial
-                <LucideArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
+                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
               </Button>
             </Link>
             <Link href="#agents">
@@ -116,7 +116,7 @@ export function Hero() {
         className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2"
       >
         <span className="text-xs text-text-muted uppercase tracking-widest">Scroll to explore</span>
-        <LucideChevronDown className="animate-bounce text-text-muted w-4 h-4" />
+        <ChevronDown className="animate-bounce text-text-muted w-4 h-4" />
       </motion.div>
     </section>
   );

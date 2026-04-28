@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { MeshBackground } from "@/components/ui/mesh-background";
 import { signIn } from "next-auth/react";
 import Link from "next/link";
-import { LucideMail, LucideArrowLeft } from "lucide-react";
+import { Mail, ArrowLeft } from "lucide-react";
 import * as React from "react";
 
 export default function LoginPage() {
@@ -27,7 +27,7 @@ export default function LoginPage() {
       <MeshBackground />
       
       <Link href="/" className="absolute top-8 left-8 flex items-center gap-2 text-text-secondary hover:text-text-primary transition-colors">
-        <LucideArrowLeft size={16} />
+        <ArrowLeft size={16} />
         <span className="text-sm font-medium">Back to home</span>
       </Link>
 
@@ -95,7 +95,7 @@ export default function LoginPage() {
               disabled={isLoading}
             >
               {isLoading ? "Sending link..." : "Send magic link"}
-              <LucideMail size={18} className="ml-2" />
+              <Mail size={18} className="ml-2" />
             </Button>
           </form>
         </div>

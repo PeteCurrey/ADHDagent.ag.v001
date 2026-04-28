@@ -2,21 +2,21 @@
 
 import { DashboardHeader } from "@/components/dashboard/layout";
 import { 
-  LucideUsers, 
-  LucideTrendingUp, 
-  LucideNewspaper, 
-  LucideFileText, 
-  LucideZap,
-  LucideDollarSign,
-  LucideArrowUpRight,
-  LucideArrowDownRight
+  Users, 
+  TrendingUp, 
+  Newspaper, 
+  FileText, 
+  Zap,
+  DollarSign,
+  ArrowUpRight,
+  ArrowDownRight
 } from "lucide-react";
 
 const stats = [
-  { label: "MRR", value: "£14,520", trend: "+12.5%", positive: true, icon: LucideDollarSign },
-  { label: "Active Subs", value: "242", trend: "+18", positive: true, icon: LucideUsers },
-  { label: "Newsletter", value: "2,480", trend: "+84", positive: true, icon: LucideNewspaper },
-  { label: "Avg Usage", value: "14.2/day", trend: "-2.1%", positive: false, icon: LucideZap },
+  { label: "MRR", value: "£14,520", trend: "+12.5%", positive: true, icon: DollarSign },
+  { label: "Active Subs", value: "242", trend: "+18", positive: true, icon: Users },
+  { label: "Newsletter", value: "2,480", trend: "+84", positive: true, icon: Newspaper },
+  { label: "Avg Usage", value: "14.2/day", trend: "-2.1%", positive: false, icon: Zap },
 ];
 
 export default function AdminDashboardPage() {
@@ -36,7 +36,7 @@ export default function AdminDashboardPage() {
                   stat.positive ? "text-success" : "text-warning"
                 )}>
                   {stat.trend}
-                  {stat.positive ? <LucideArrowUpRight size={12} /> : <LucideArrowDownRight size={12} />}
+                  {stat.positive ? <ArrowUpRight size={12} /> : <ArrowDownRight size={12} />}
                 </div>
               </div>
               <div className="text-2xl font-bold text-text-primary">{stat.value}</div>
@@ -106,7 +106,7 @@ export default function AdminDashboardPage() {
                 <div key={i} className="flex items-center justify-between group cursor-pointer">
                   <div className="flex items-center gap-4">
                     <div className="p-2 rounded-lg bg-surface-raised border border-border text-text-muted group-hover:text-accent transition-colors">
-                      {item.type === "Blog" ? <LucideFileText size={16} /> : <LucideNewspaper size={16} />}
+                      {item.type === "Blog" ? <FileText size={16} /> : <Newspaper size={16} />}
                     </div>
                     <div>
                       <div className="text-sm font-bold group-hover:text-accent transition-colors">{item.title}</div>

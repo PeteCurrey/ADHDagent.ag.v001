@@ -1,7 +1,7 @@
 import { PageWrapper } from "@/components/layout/page-wrapper";
 import { ScrollReveal } from "@/components/layout/page-wrapper";
 import { Button } from "@/components/ui/button";
-import { LucideCalendar, LucideArrowRight, LucideMail } from "lucide-react";
+import { Calendar, ArrowRight, Mail } from "lucide-react";
 import Link from "next/link";
 
 const pastIssues = [
@@ -67,7 +67,7 @@ export default function NewsletterPage() {
                 />
                 <Button variant="gradient" size="lg" className="h-14 px-8">
                   Subscribe
-                  <LucideMail size={18} className="ml-2" />
+                  <Mail size={18} className="ml-2" />
                 </Button>
               </form>
               <p className="mt-4 text-sm text-text-muted">
@@ -107,7 +107,7 @@ export default function NewsletterPage() {
                     <div className="flex justify-between items-center mb-6">
                       <div className="text-xs font-bold tracking-widest text-text-muted uppercase">Issue #{issue.number}</div>
                       <div className="flex items-center gap-2 text-xs text-text-muted">
-                        <LucideCalendar size={12} />
+                        <Calendar size={12} />
                         {issue.date}
                       </div>
                     </div>
@@ -119,7 +119,7 @@ export default function NewsletterPage() {
                     </p>
                     <div className="flex items-center gap-2 text-sm font-semibold text-accent opacity-0 group-hover:opacity-100 transition-opacity">
                       Read issue
-                      <LucideArrowRight size={16} />
+                      <ArrowRight size={16} />
                     </div>
                   </div>
                 </Link>

@@ -2,23 +2,23 @@
 
 import { ScrollReveal } from "@/components/layout/page-wrapper";
 import { 
-  LucideLayout, 
-  LucideTrendingUp, 
-  LucideMail, 
-  LucideNewspaper, 
-  LucideCheckCircle2, 
-  LucideRotateCcw, 
-  LucideMic,
-  LucideArrowRight
+  Layout, 
+  TrendingUp, 
+  Mail, 
+  Newspaper, 
+  CheckCircle2, 
+  RotateCcw, 
+  Mic,
+  ArrowRight
 } from "lucide-react";
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { Button } from "@/components/ui/button";
 
 const agents = [
   {
     slug: "clarity",
     name: "CLARITY",
-    icon: <LucideLayout size={24} />,
+    icon: <Layout size={24} />,
     tagline: "Turn morning chaos into a plan you'll actually follow.",
     description: "Voice note or brain dump → structured, prioritised daily plan in 60 seconds.",
     color: "accent"
@@ -26,7 +26,7 @@ const agents = [
   {
     slug: "momentum",
     name: "MOMENTUM",
-    icon: <LucideTrendingUp size={24} />,
+    icon: <TrendingUp size={24} />,
     tagline: "A body-doubling partner that checks in and keeps you moving.",
     description: "AI accountability companion — real check-ins, gentle nudges, no judgment.",
     color: "success"
@@ -34,7 +34,7 @@ const agents = [
   {
     slug: "inbox-zero",
     name: "INBOX ZERO",
-    icon: <LucideMail size={24} />,
+    icon: <Mail size={24} />,
     tagline: "Your email, handled. Drafts written. Noise eliminated.",
     description: "Reads your inbox, understands context, drafts responses in your voice.",
     color: "accent"
@@ -42,7 +42,7 @@ const agents = [
   {
     slug: "briefing",
     name: "BRIEFING",
-    icon: <LucideNewspaper size={24} />,
+    icon: <Newspaper size={24} />,
     tagline: "What's actually worth knowing in AI this week.",
     description: "Weekly AI intelligence — stripped of hype, focused on what matters for your work.",
     color: "warning"
@@ -50,7 +50,7 @@ const agents = [
   {
     slug: "finisher",
     name: "FINISHER",
-    icon: <LucideCheckCircle2 size={24} />,
+    icon: <CheckCircle2 size={24} />,
     tagline: "That project you've been avoiding? Let's get it done.",
     description: "Takes stuck projects, creates atomic next steps, tracks completion.",
     color: "success"
@@ -58,7 +58,7 @@ const agents = [
   {
     slug: "reframe",
     name: "REFRAME",
-    icon: <LucideRotateCcw size={24} />,
+    icon: <RotateCcw size={24} />,
     tagline: "When you're spiralling, Reframe gets you unstuck.",
     description: "Cognitive reframing for overwhelm, procrastination paralysis, and imposter moments.",
     color: "warning"
@@ -66,7 +66,7 @@ const agents = [
   {
     slug: "capture",
     name: "CAPTURE",
-    icon: <LucideMic size={24} />,
+    icon: <Mic size={24} />,
     tagline: "Say it. Forget it. We'll remember.",
     description: "Voice-to-action: any thought captured instantly and routed to the right place.",
     color: "accent"
@@ -110,7 +110,7 @@ export function Agents() {
                   
                   <div className="flex items-center text-sm font-semibold text-accent opacity-0 group-hover:opacity-100 transition-opacity">
                     See how it works
-                    <LucideArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
+                    <ArrowRight size={16} className="ml-2 group-hover:translate-x-1 transition-transform" />
                   </div>
 
                   {/* Animated typing mockup (hover only) */}
@@ -134,7 +134,7 @@ export function Agents() {
             <div className="h-full p-8 bg-gradient-hero rounded-card flex flex-col justify-center items-center text-center">
               <h3 className="text-2xl font-bold text-bg mb-4">Every agent is powered by Claude.</h3>
               <p className="text-bg/80 text-sm mb-8 max-w-[240px]">
-                We've trained each one specifically for ADHD executive function challenges.
+                We&apos;ve trained each one specifically for ADHD executive function challenges.
               </p>
               <Link href="/signup">
                 <Button variant="default" className="bg-bg text-text-primary border-none hover:bg-bg/90">
