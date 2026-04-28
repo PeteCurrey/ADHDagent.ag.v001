@@ -1,0 +1,111 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum Plan {
+  FREE
+  FOCUS
+  EXECUTIVE
+  TEAM
+}
+
+enum Role {
+  USER
+  ADMIN
+}
+
+enum SubscriptionStatus {
+  ACTIVE
+  CANCELED
+  PAST_DUE
+  TRIALING
+}
+
+model User {
+  id                 String               @id @default(cuid())
+  email              String               @unique
+  name               String?
+  plan               Plan                 @default(FREE)
+  role               Role                 @default(USER)
+  stripeCustomerId   String?              @unique
+  onboardingComplete Boolean              @default(false)
+  adhdType           String?
+  createdAt          DateTime             @default(now())
+  updatedAt          DateTime             @updatedAt
+  subscriptions      Subscription[]
+  agentSessions      AgentSession[]
+}
+
+model Subscription {
+  id                   String             @id @default(cuid())
+  userId               String
+  user                 User               @relation(fields: [userId], references: [id])
+  stripeSubscriptionId String             @unique
+  status               SubscriptionStatus
+  currentPeriodEnd     DateTime
+  planId               String
+  createdAt            DateTime           @default(now())
+  updatedAt            DateTime           @updatedAt
+}
+
+model NewsletterSubscriber {
+  id             String    @id @default(cuid())
+  email          String    @unique
+  confirmed      Boolean   @default(false)
+  subscribedAt   DateTime  @default(now())
+  unsubscribedAt DateTime?
+}
+
+model BriefingIssue {
+  id        String   @id @default(cuid())
+  title     String
+  slug      String   @unique
+  content   Json
+  sentAt    DateTime?
+  draft     Boolean  @default(true)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model BlogPost {
+  id              String   @id @default(cuid())
+  title           String
+  slug            String   @unique
+  content         Json
+  excerpt         String
+  category        String
+  published       Boolean  @default(false)
+  publishedAt     DateTime?
+  author          String
+  metaTitle       String?
+  metaDescription String?
+  ogImage         String?
+  createdAt       DateTime @default(now())
+  updatedAt       DateTime @updatedAt
+}
+
+model AgentSession {
+  id        String   @id @default(cuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id])
+  agentSlug String
+  messages  Json
+  savedAt   DateTime @default(now())
+  createdAt DateTime @default(now())
+}
+
+model AgentConfig {
+  id               String   @id @default(cuid())
+  slug             String   @unique
+  name             String
+  systemPrompt     String
+  enabled          Boolean  @default(true)
+  availableOnPlans Plan[]
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+}
