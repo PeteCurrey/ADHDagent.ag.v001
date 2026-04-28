@@ -45,7 +45,7 @@ const faqs = [
 
 export function FAQ() {
   return (
-    <section id="faq" className="section-padding bg-bg">
+    <section id="faq" className="section-padding bg-surface">
       <div className="container-custom">
         <ScrollReveal>
           <div className="text-center mb-16">

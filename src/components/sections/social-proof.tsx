@@ -1,7 +1,7 @@
 "use client";
 
 import { ScrollReveal } from "@/components/layout/page-wrapper";
-import { cn } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const testimonials = [
   {

@@ -1,7 +1,8 @@
 "use client";
 
 import { ScrollReveal } from "@/components/layout/page-wrapper";
-import { Button, cn } from "@/components/ui/button";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 import { Check } from "lucide-react";
 import * as React from "react";
 import Link from "next/link";

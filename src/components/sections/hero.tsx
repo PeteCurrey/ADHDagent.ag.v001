@@ -46,10 +46,11 @@ export function Hero() {
             </div>
           </motion.div>
 
-          <motion.h1 variants={item} className="text-hero mb-8 text-text-primary">
-            Your <em className="text-accent">brain</em> is brilliant.<br />
-            Give it the<br />
-            structure it deserves.
+          <motion.h1 
+            variants={item} 
+            className="text-hero mb-8 text-text-primary max-w-[700px] mx-auto"
+          >
+            Your <em className="text-accent">brain</em> is brilliant. Give it the structure it deserves.
           </motion.h1>
 
           <motion.p variants={item} className="text-xl md:text-2xl text-text-secondary mb-12 max-w-[600px] mx-auto leading-relaxed">

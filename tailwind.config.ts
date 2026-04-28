@@ -36,8 +36,8 @@ const config: Config = {
         "gradient-accent": "linear-gradient(135deg, #7B6EF6 0%, #9B8EFF 100%)",
       },
       borderRadius: {
-        card: "16px",
-        button: "8px",
+        card: "8px",
+        button: "2px",
       },
       spacing: {
         "8": "8px",

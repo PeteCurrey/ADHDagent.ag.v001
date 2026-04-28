@@ -11,8 +11,8 @@ import {
   Mic,
   ArrowRight
 } from "lucide-react";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 const agents = [
   {
@@ -149,7 +149,3 @@ export function Agents() {
   );
 }
 
-// Utility function duplicated for simplicity in this file
-function cn(...inputs: any[]) {
-  return inputs.filter(Boolean).join(" ");
-}
