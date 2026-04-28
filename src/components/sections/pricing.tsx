@@ -62,7 +62,7 @@ export function Pricing() {
     <section id="pricing" className="section-padding bg-bg">
       <div className="container-custom">
         <ScrollReveal>
-          <div className="text-center mb-16">
+          <div className="text-center mb-32">
             <h2 className="text-h2 mb-4">Straightforward pricing. No asterisks.</h2>
             <p className="text-text-secondary text-lg mb-10">
               Cancel any time. 14-day free trial on all plans. No card required to start.
